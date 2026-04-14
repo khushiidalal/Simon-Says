@@ -68,7 +68,7 @@ function checkAns() {
             h2.innerHTML = `Game over! Your score was <b>${level}</b> <br/>Press any key to start again`;
             startOver();
         },150);
-        startOver();
+
     }}
 
 const allBtns = document.querySelectorAll(".btn");
