@@ -4,7 +4,6 @@ let userSeq = [];
 const btns = ["orange", "green", "yellow", "blue"];
 let started = false;
 let level = 0;
-let score = 0;
 const h2 = document.querySelector("h2");
 
 function playNextSequence() {
@@ -59,15 +58,14 @@ function checkAns() {
 
     if (userSeq[idx] === gameSeq[idx]) {
         if (userSeq.length === gameSeq.length) {
-            score=level
             setTimeout(playNextSequence, 1000);
         }
     } else {
-        h2.innerHTML = `Game over! Your score was <b>${score}</b> <br/>Press any key to start again`;
+        h2.innerHTML = `Game over! Your score was <b>${level}</b> <br/>Press any key to start again`;
         document.querySelector("body").style.backgroundColor="red";
         setTimeout(function(){
             document.querySelector("body").style.backgroundColor = "white";
-            h2.innerHTML = `Game over! Your score was <b>${score}</b> <br/>Press any key to start again`;
+            h2.innerHTML = `Game over! Your score was <b>${level}</b> <br/>Press any key to start again`;
             startOver();
         },150);
         startOver();
@@ -83,6 +81,5 @@ function startOver(){
     gameSeq = [];
     userSeq = [];
     level = 0;
-    score = 0;
    
 }
