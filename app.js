@@ -61,11 +61,11 @@ function checkAns() {
             setTimeout(playNextSequence, 1000);
         }
     } else {
-        h2.innerHTML = `Game over! Your score was <b>${level}</b> <br/>Press any key to start again`;
+        h2.innerHTML = `Game over! Your score was <b>${level-1}</b> <br/>Press any key to start again`;
         document.querySelector("body").style.backgroundColor="red";
         setTimeout(function(){
             document.querySelector("body").style.backgroundColor = "white";
-            h2.innerHTML = `Game over! Your score was <b>${level}</b> <br/>Press any key to start again`;
+            h2.innerHTML = `Game over! Your score was <b>${level-1}</b> <br/>Press any key to start again`;
             startOver();
         },150);
 
